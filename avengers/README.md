@@ -1,4 +1,4 @@
-# SuperHakce
+# avengers：复仇者总部（权限管理系统）
 微服务，分布式，高并发. . . . . . 
 可缺省包结构:
 annotation 自定义的注解

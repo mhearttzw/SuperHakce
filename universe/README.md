@@ -1,4 +1,4 @@
-# SuperHakce
+# universe：宇宙中心（服务注册中心）
 微服务，分布式，高并发. . . . . . 
 可缺省包结构:
 annotation 自定义的注解
