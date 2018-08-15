@@ -36,6 +36,17 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
+        </dependency>
+
     </dependencies>
 
     <dependencyManagement>
@@ -58,54 +69,5 @@
             </plugin>
         </plugins>
     </build>
-
-    <profiles>
-        <profile>
-            <id>register</id>
-            <properties>
-                <profiles.activation>register</profiles.activation>
-            </properties>
-            <build>
-                <resources>
-                    <resource>
-                        <directory>
-                            ${project.basedir}/src/main/resources/config/register
-                        </directory>
-                    </resource>
-                </resources>
-            </build>
-        </profile>
-        <profile>
-            <id>register2</id>
-            <properties>
-                <profiles.activation>register2</profiles.activation>
-            </properties>
-            <build>
-                <resources>
-                    <resource>
-                        <directory>
-                            ${project.basedir}/src/main/resources/config/register2
-                        </directory>
-                    </resource>
-                </resources>
-            </build>
-        </profile>
-        <profile>
-            <id>register3</id>
-            <properties>
-                <profiles.activation>register3</profiles.activation>
-            </properties>
-            <build>
-                <resources>
-                    <resource>
-                        <directory>
-                            ${project.basedir}/src/main/resources/config/register3
-                        </directory>
-                    </resource>
-                </resources>
-            </build>
-        </profile>
-
-    </profiles>
 
 </project>

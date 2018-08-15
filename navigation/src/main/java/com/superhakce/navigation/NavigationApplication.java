@@ -1,4 +1,4 @@
-package com.superhakce.universe;
+package com.superhakce.navigation;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,12 +8,12 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.PropertySource;
 
 @SpringBootApplication
-@EnableEurekaServer
 @EnableZuulProxy
+@EnableEurekaClient
 @PropertySource({"classpath:application.properties", "classpath:application.yml"})
-public class UniverseApplication {
+public class NavigationApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(UniverseApplication.class, args);
+        SpringApplication.run(NavigationApplication.class, args);
     }
 }
