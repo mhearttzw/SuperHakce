@@ -26,14 +26,21 @@ public class BlogController {
 
     @GetMapping(value = "/saveBlog")
     public String saveBlog() throws Exception{
+
         Blog blog = new Blog();
+
+
         blog.setContent("First Blog");
         blog.setCreateTime(new Date());
         blog.setUpdateTime(new Date());
         blog.setName("First Blog");
         blog.setUserId(1L);
         blog.setUserName("heqingjiang");
+
+
         blogService.saveBlog(blog);
+
+
         return "OK";
     }
 
