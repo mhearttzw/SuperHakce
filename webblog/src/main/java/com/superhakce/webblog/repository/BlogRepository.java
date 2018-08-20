@@ -18,6 +18,6 @@ public interface BlogRepository extends MongoRepository<Blog, String> {
      * @param name
      * @return
      */
-    Blog findByName(String name);
+    Blog findByBlogName(String name);
 
 }

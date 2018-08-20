@@ -26,27 +26,20 @@ public class BlogController {
 
     @GetMapping(value = "/saveBlog")
     public String saveBlog() throws Exception{
-
         Blog blog = new Blog();
-
-
-        blog.setContent("First Blog");
+        blog.setBlogContent("First Blog");
         blog.setCreateTime(new Date());
         blog.setUpdateTime(new Date());
-        blog.setName("First Blog");
+        blog.setBlogName("First Blog");
         blog.setUserId(1L);
         blog.setUserName("heqingjiang");
-
-
         blogService.saveBlog(blog);
-
-
         return "OK";
     }
 
     @GetMapping(value = "/findBlogByName")
     public Blog findBlogByName() throws Exception{
-        return blogService.findByName("First Blog");
+        return blogService.findByBlogName("First Blog");
     }
 
     @GetMapping(value = "/findBlogById")

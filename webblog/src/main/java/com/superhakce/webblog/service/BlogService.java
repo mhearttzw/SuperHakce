@@ -22,7 +22,7 @@ public interface BlogService {
      * @param name
      * @return
      */
-    Blog findByName(String name) throws Exception;
+    Blog findByBlogName(String name) throws Exception;
 
     /**
      *  根据ID查询博客

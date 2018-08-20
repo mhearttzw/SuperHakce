@@ -18,13 +18,13 @@ public class Blog {
     @Id
     private String id;
 
-    private String name;//博客标题
+    private String blogName;//博客标题
+
+    private String blogContent;//博客内容
 
     private Long userId;//博客用户ID
 
     private String userName;//博客用户名称
-
-    private String content;//博客内容
 
     private Date createTime;//修改时间
 

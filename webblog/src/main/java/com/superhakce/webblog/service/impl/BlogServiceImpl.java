@@ -24,12 +24,12 @@ public class BlogServiceImpl implements BlogService {
 
     /**
      *  根据标题查询博客
-     * @param name
+     * @param blogName
      * @return
      */
     @Override
-    public Blog findByName(String name) throws Exception{
-        return blogRepository.findByName(name);
+    public Blog findByBlogName(String blogName) throws Exception{
+        return blogRepository.findByBlogName(blogName);
     }
 
     /**
