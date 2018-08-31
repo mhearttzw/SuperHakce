@@ -12,22 +12,22 @@ public interface BlogService {
 
     /**
      * 保存博客
-     * @param blog
-     * @throws Exception
+     * @param blog       博客
+     * @throws Exception SQLException
      */
     void saveBlog(Blog blog) throws Exception;
 
     /**
      *  根据标题查询博客
-     * @param name
-     * @return
+     * @param name      博客名称
+     * @return          Blog
      */
     Blog findByBlogName(String name) throws Exception;
 
     /**
      *  根据ID查询博客
-     * @param id
-     * @return
+     * @param id       博客ID
+     * @return         Blog
      */
     Blog findById(String id) throws Exception;
 

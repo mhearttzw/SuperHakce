@@ -1,50 +1,50 @@
 package com.superhakce.webblog.controller;
 
 import com.superhakce.webblog.entity.Blog;
+import com.superhakce.webblog.enums.SystemCode;
+import com.superhakce.webblog.model.common.ResponseModel;
 import com.superhakce.webblog.service.BlogService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.data.repository.query.Param;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Date;
 
 /**
  * @Author: heqingjiang
  * @Maintenance: author
- * @Description: 博客控制器
+ * @Description: 博客 Controller
  * @Date: Create in 2018/8/16 12:10
  */
 @RestController
 @Slf4j
-@RequestMapping(value = "api/webblog")
+@RequestMapping(value = "api/webBlog")
 public class BlogController {
+
 
     @Autowired
     private BlogService blogService;
 
-    @GetMapping(value = "/saveBlog")
-    public String saveBlog() throws Exception{
-        Blog blog = new Blog();
-        blog.setBlogContent("First Blog");
-        blog.setCreateTime(new Date());
-        blog.setUpdateTime(new Date());
-        blog.setBlogName("First Blog");
-        blog.setUserId(1L);
-        blog.setUserName("heqingjiang");
+
+    @PostMapping(value = "/saveBlog")
+    public ResponseModel saveBlog(Blog blog) throws Exception{
         blogService.saveBlog(blog);
-        return "OK";
+        return new ResponseModel(SystemCode.SUCCESS);
     }
 
-    @GetMapping(value = "/findBlogByName")
-    public Blog findBlogByName() throws Exception{
-        return blogService.findByBlogName("First Blog");
+
+    @PostMapping(value = "/findBlogByName")
+    public ResponseModel<Blog> findBlogByName(@Param(value = "blogName") String blogName) throws Exception{
+        Blog blog = blogService.findByBlogName(blogName);
+        return new ResponseModel<>(SystemCode.SUCCESS, blog);
     }
 
-    @GetMapping(value = "/findBlogById")
-    public Blog findBlogById() throws Exception{
-        return blogService.findById("5b74fb97dc1ada0c2461b8b9");
+
+    @PostMapping(value = "/findBlogById")
+    public ResponseModel<Blog> findBlogById(@Param(value = "blogId") String blogId) throws Exception{
+        Blog blog = blogService.findById(blogId);
+        return new ResponseModel<>(SystemCode.SUCCESS, blog);
     }
 
 }

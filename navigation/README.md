@@ -1,4 +1,5 @@
-# navigation：路由系统
+# navigation：路由系统，主要功能-SuperHakce API 访问都需要经
+过 navigation 进行路由，路由网关，负载均衡，访问过滤
 微服务，分布式，高并发. . . . . . 
 可缺省包结构:
 annotation 自定义的注解

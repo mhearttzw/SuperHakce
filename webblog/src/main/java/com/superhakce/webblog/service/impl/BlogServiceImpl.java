@@ -22,31 +22,16 @@ public class BlogServiceImpl implements BlogService {
     @Autowired
     private BlogRepository blogRepository;
 
-    /**
-     *  根据标题查询博客
-     * @param blogName
-     * @return
-     */
     @Override
     public Blog findByBlogName(String blogName) throws Exception{
         return blogRepository.findByBlogName(blogName);
     }
 
-    /**
-     * 保存博客
-     * @param blog
-     * @throws Exception
-     */
     @Override
     public void saveBlog(Blog blog) throws Exception{
         blogRepository.save(blog);
     }
 
-    /**
-     *  根据ID查询博客
-     * @param id
-     * @return
-     */
     @Override
     public Blog findById(String id) throws Exception{
         Optional<Blog> optionalBlog = blogRepository.findById(id);
