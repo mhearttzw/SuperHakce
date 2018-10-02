@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 /**
  * @Author: heqingjiang
  * @Maintenance: author
- * @Description: 具体的构建角色
+ * @Description: 具体的构件角色
  * @Date: Create in 2018/10/2 10:39
  */
 public class ConcreteComponent implements Component{

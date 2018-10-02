@@ -1,17 +1,13 @@
 package com.superhakce.algorithm.designpatterns.decorator;
 
-import java.math.BigDecimal;
-
 /**
  * @Author: heqingjiang
  * @Maintenance: author
  * @Description: 抽象构件角色
- * @Date: Create in 2018/10/2 10:37
+ * @Date: Create in 2018/10/2 15:04
  */
-public interface Component {
+public interface BonusComponet {
 
-    void showAction();
-
-    BigDecimal showNumber();
+    Double getBonus(String name);
 
 }
