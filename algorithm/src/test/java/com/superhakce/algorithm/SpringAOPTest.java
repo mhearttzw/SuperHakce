@@ -1,8 +1,8 @@
 package com.superhakce.algorithm;
 
-import com.superhakce.algorithm.springaop.ForumHandler;
-import com.superhakce.algorithm.springaop.ForumService;
-import com.superhakce.algorithm.springaop.ForumServiceImpl;
+import com.superhakce.algorithm.practice.springaop.ForumHandler;
+import com.superhakce.algorithm.practice.springaop.ForumService;
+import com.superhakce.algorithm.practice.springaop.ForumServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;

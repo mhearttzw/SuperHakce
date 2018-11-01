@@ -1,6 +1,6 @@
 package com.superhakce.algorithm;
 
-import com.superhakce.algorithm.forkjoin.CountRecursiveTask;
+import com.superhakce.algorithm.practice.forkjoin.CountRecursiveTask;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,13 +1,13 @@
 package com.superhakce.algorithm;
 
-import com.superhakce.algorithm.designpatterns.decorator.BonusComponet;
-import com.superhakce.algorithm.designpatterns.decorator.BonusConcreteComponet;
-import com.superhakce.algorithm.designpatterns.decorator.BonusDocorator;
-import com.superhakce.algorithm.designpatterns.decorator.Docorator;
-import com.superhakce.algorithm.designpatterns.decorator.GroupBonusDocorator;
-import com.superhakce.algorithm.designpatterns.decorator.MonthBonusDocorator;
-import com.superhakce.algorithm.designpatterns.decorator.SumBonusDocorator;
-import com.superhakce.algorithm.designpatterns.decorator.Teacher;
+import com.superhakce.algorithm.practice.designpatterns.decorator.BonusComponet;
+import com.superhakce.algorithm.practice.designpatterns.decorator.BonusConcreteComponet;
+import com.superhakce.algorithm.practice.designpatterns.decorator.BonusDocorator;
+import com.superhakce.algorithm.practice.designpatterns.decorator.Docorator;
+import com.superhakce.algorithm.practice.designpatterns.decorator.GroupBonusDocorator;
+import com.superhakce.algorithm.practice.designpatterns.decorator.MonthBonusDocorator;
+import com.superhakce.algorithm.practice.designpatterns.decorator.SumBonusDocorator;
+import com.superhakce.algorithm.practice.designpatterns.decorator.Teacher;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;

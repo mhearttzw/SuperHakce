@@ -1,6 +1,6 @@
 package com.superhakce.algorithm;
 
-import com.superhakce.algorithm.service.TestAtomikos;
+import com.superhakce.algorithm.practice.service.TestAtomikos;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;

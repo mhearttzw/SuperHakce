@@ -1,7 +1,7 @@
 package com.superhakce.algorithm;
 
-import com.superhakce.algorithm.config.MasterConfig;
-import com.superhakce.algorithm.config.SlaveConfig;
+import com.superhakce.algorithm.practice.config.MasterConfig;
+import com.superhakce.algorithm.practice.config.SlaveConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
