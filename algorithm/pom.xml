@@ -96,6 +96,12 @@
 			<optional>true</optional>
 		</dependency>
 
+        <!--http://localhost:8773/actuator/health-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<dependencyManagement>
