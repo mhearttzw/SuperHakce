@@ -29,9 +29,9 @@ public interface SignUserRepository extends JpaRepository<SignUser, Long>, JpaSp
      */
     Optional<SignUser> findById(Long id);
 
-    List<SignUser> findByNickname(String nickname);
+    Optional<SignUser> findByNickname(String nickname);
 
-    List<SignUser> findByPhone(String phone);
+    Optional<SignUser> findByPhone(String phone);
 
 }
 

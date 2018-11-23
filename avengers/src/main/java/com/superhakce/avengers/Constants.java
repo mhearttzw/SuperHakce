@@ -15,6 +15,16 @@ import java.util.Map;
  */
 public interface Constants {
 
-    String PHONE_STRING = "phone";
+    String PHONE_STRING = "phone=";
+    String TOKEN_STRING = "token=";
+
+    long MSG_TIMEOUT = 5L;
+
+    String SIGN_UP_CHECK = "sign_up_check";
+    String LOGIN_CHECK = "login_check";
+
+    String FORMAT_EIGHT = "%08d";
+
+    String IMG_IP = "";
 
 }

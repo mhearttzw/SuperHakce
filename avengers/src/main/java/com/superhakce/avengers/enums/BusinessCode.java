@@ -37,6 +37,8 @@ public enum BusinessCode {
     COMMENT_DELETE_FAILED("1016", "删除评论失败！"),
     USER_EXISTS("1017", "用户已存在！"),
     PHONE_HAS_SIGNED("1018", "该电话号码已注册！"),
+    PHONE_FORMAT_INCORRECT("1019", "手机号格式不正确！"),
+    USER_WAITING_SIGN_UP("1020", "用户需注册"),
 
 
 

@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 import com.superhakce.avengers.common.utils.ExceptionUtil;
 import com.superhakce.avengers.enums.BusinessCode;
 import com.superhakce.avengers.exception.ParamException;
+import com.superhakce.avengers.exception.ThirdCallFailException;
 import com.superhakce.avengers.model.JsonResult;
 import feign.FeignException;
 import lombok.extern.slf4j.Slf4j;
@@ -92,5 +93,9 @@ public class ExceptionHandingController {
         return new JsonResult(BusinessCode.PARAMETER_IS_INCORRECT, "!字段:" + sb.toString() + " 有误!");
     }
 
-
+    @ExceptionHandler(ThirdCallFailException.class)
+    public Object validation(ThirdCallFailException e) {
+        log.info("第三方服务调用失败,Exception:{}", e.getMessage());
+        return new JsonResult(BusinessCode.FAILED.getCode(), e.getMessage());
+    }
 }

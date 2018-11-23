@@ -10,6 +10,16 @@ import java.security.MessageDigest;
  */
 public class MD5Util {
 
+    /**
+     * 加盐加密
+     * @param content   加密内容
+     * @param salt      盐
+     * @return
+     */
+    public final static String md5WithSalt(String content, String salt) {
+        return md5(content + salt);
+    }
+
     public final static String md5(String content) {
         //用于加密的字符
         char[] md5String = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
