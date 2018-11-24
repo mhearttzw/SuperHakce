@@ -23,6 +23,8 @@ public interface Constants {
     String SIGN_UP_CHECK = "sign_up_check";
     String LOGIN_CHECK = "login_check";
 
+    String AUTHORIZATION = "user_token";
+
     String FORMAT_EIGHT = "%08d";
 
     String IMG_IP = "";

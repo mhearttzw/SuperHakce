@@ -48,4 +48,10 @@ public class SignController {
     public JsonResult phoneLogin(String username, String password) {
         return signUserService.usernameLogin(username, password);
     }
+
+    @ApiOperation(value = "用户登出")
+    @PostMapping(value = "/signOut")
+    public JsonResult signOut() {
+
+    }
 }
