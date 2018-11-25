@@ -1,8 +1,8 @@
 package com.superhakce.avengers.service;
 
-import com.aliyuncs.exceptions.ClientException;
 import com.superhakce.avengers.model.JsonResult;
-import com.superhakce.avengers.model.userInfo.SignUpModel;
+import com.superhakce.avengers.model.common.AuthInfoModel;
+import com.superhakce.avengers.model.userInfo.req.SignUpModel;
 
 /**
  * @author           echelon
@@ -36,9 +36,25 @@ public interface SignUserService {
 
     /**
      * 用户名密码登录
-     * @param username
-     * @param password
+     * @param username      用户名
+     * @param password      密码
      * @return
      */
     JsonResult usernameLogin(String username, String password);
+
+    /**
+     * 用户登出
+     * @param authInfoModel     鉴权model
+     * @return
+     */
+    JsonResult signOut(AuthInfoModel authInfoModel);
+
+    /**
+     * 用户修改密码
+     * @param authInfoModel
+     * @param oldPwd
+     * @param newPwd
+     * @return
+     */
+    JsonResult passwordChange(AuthInfoModel authInfoModel, String oldPwd, String newPwd);
 }

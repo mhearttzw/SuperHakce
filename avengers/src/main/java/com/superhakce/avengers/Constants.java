@@ -15,10 +15,12 @@ import java.util.Map;
  */
 public interface Constants {
 
-    String PHONE_STRING = "phone=";
-    String TOKEN_STRING = "token=";
+    String PHONE_STRING = "phone-";
+    String TOKEN_STRING = "token-";
+    String MSG_STRING = "msg-";
 
     long MSG_TIMEOUT = 5L;
+    long TOKEN_TIMEOUT = 5L;
 
     String SIGN_UP_CHECK = "sign_up_check";
     String LOGIN_CHECK = "login_check";

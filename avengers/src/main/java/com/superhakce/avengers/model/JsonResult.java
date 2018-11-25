@@ -42,7 +42,7 @@ public class JsonResult<T> {
 
     public JsonResult(BusinessCode businessCode, String reason) {
         this.code = businessCode.getCode();
-        this.msg = businessCode.getMsg() + reason;
+        this.msg = businessCode.getMsg() + "，reason";
     }
 
     public JsonResult(BusinessCode businessCode, T data) {
@@ -61,6 +61,13 @@ public class JsonResult<T> {
     public JsonResult set(BusinessCode businessCode) {
         this.code = businessCode.getCode();
         this.msg = businessCode.getMsg();
+        return this;
+    }
+
+    public JsonResult setSuccess(T data) {
+        this.code = BusinessCode.SUCCESS.getCode();
+        this.msg = BusinessCode.SUCCESS.getMsg();
+        this.data = data;
         return this;
     }
 

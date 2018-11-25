@@ -28,9 +28,9 @@ public interface RedisService {
      */
     void set(String key, String value, long timeout, TimeUnit unit);
 
+
     /**
      * redis获取值
-     *
      * @param key key
      * @return String
      * 
@@ -38,12 +38,20 @@ public interface RedisService {
     String get(String key);
 
     /**
+     * redis获取值（添加前缀）
+     * @param prefix    前缀（一般用设为常量值）
+     * @param con       key
+     * @return
+     */
+    String getWithPrefix(String prefix, String con);
+
+    /**
      * redis删除值
      *
      * @param key key
      * 
      */
-    void delete(String key);
+    Boolean delete(String key);
 
     /**
      * redis删除值

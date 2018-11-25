@@ -49,15 +49,14 @@ public class RedisServiceImpl implements RedisService {
         return valueOperations.get(key);
     }
 
-    /**
-     * redis删除值
-     *
-     * @param key key
-     * @
-     */
     @Override
-    public void delete(String key) {
-        redisTemplate.delete(key);
+    public String getWithPrefix(String prefix, String con) {
+        return get(prefix + con);
+    }
+
+    @Override
+    public Boolean delete(String key) {
+        return redisTemplate.delete(key);
     }
 
     @Override

@@ -39,6 +39,8 @@ public enum BusinessCode {
     PHONE_HAS_SIGNED("1018", "该电话号码已注册！"),
     PHONE_FORMAT_INCORRECT("1019", "手机号格式不正确！"),
     USER_WAITING_SIGN_UP("1020", "用户需注册"),
+    CODE_WAITING_VERIFY("1021", "未通过短信验证！"),
+
 
 
 

@@ -28,7 +28,7 @@ public class SignUser {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    protected Long id;
+    private Long id;
 
     /**
      * 手机号码

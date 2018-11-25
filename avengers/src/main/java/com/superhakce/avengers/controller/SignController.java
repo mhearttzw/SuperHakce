@@ -1,9 +1,12 @@
 package com.superhakce.avengers.controller;
 
 
+import com.superhakce.avengers.common.annotation.Authenticate;
 import com.superhakce.avengers.common.utils.ValidatorRegUtil;
+import com.superhakce.avengers.exception.ParamException;
 import com.superhakce.avengers.model.JsonResult;
-import com.superhakce.avengers.model.userInfo.SignUpModel;
+import com.superhakce.avengers.model.common.AuthInfoModel;
+import com.superhakce.avengers.model.userInfo.req.SignUpModel;
 import com.superhakce.avengers.service.SignUserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -51,7 +54,19 @@ public class SignController {
 
     @ApiOperation(value = "用户登出")
     @PostMapping(value = "/signOut")
-    public JsonResult signOut() {
+    @Authenticate
+    public JsonResult signOut(AuthInfoModel authInfoModel) {
+        return signUserService.signOut(authInfoModel);
+    }
 
+    @ApiOperation(value = "修改密码")
+    @PostMapping(value = "/password/change")
+    @Authenticate
+    public JsonResult passwordChange(AuthInfoModel authInfoModel, String oldPassword, String newPassword) {
+        if (!ValidatorRegUtil.isPassword(oldPassword) ||
+            !ValidatorRegUtil.isPassword(newPassword)) {
+            throw new ParamException("密码格式错误！");
+        }
+        return signUserService.passwordChange(authInfoModel, oldPassword, newPassword);
     }
 }

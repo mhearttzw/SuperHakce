@@ -1,4 +1,4 @@
-package com.superhakce.avengers.model.userInfo;
+package com.superhakce.avengers.model.userInfo.req;
 
 import lombok.Data;
 

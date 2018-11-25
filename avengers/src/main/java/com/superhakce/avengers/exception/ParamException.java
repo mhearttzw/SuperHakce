@@ -13,14 +13,10 @@ import lombok.Data;
 public class ParamException extends RuntimeException {
 
     /**
-     * //错误码
+     * 错误码枚举类
      */
-    private String code;
+    private BusinessCode businessCode;
 
-    /**
-     * 错误信息
-     */
-    private String msg;
 
     public ParamException(String message) {
         super(message);
@@ -28,7 +24,6 @@ public class ParamException extends RuntimeException {
 
     public ParamException(BusinessCode businessCode) {
         super(businessCode.getMsg());
-        this.code = businessCode.getCode();
-        this.msg = businessCode.getCode();
+        this.businessCode = businessCode;
     }
 }

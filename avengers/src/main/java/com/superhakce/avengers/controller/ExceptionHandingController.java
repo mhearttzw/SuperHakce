@@ -44,6 +44,7 @@ public class ExceptionHandingController {
     @ExceptionHandler(value = ParamException.class)
     public JsonResult handleParamException(ParamException pe) {
         return new JsonResult(BusinessCode.PARAMETER_IS_INCORRECT, pe.getMessage());
+//        return new JsonResult(pe.getBusinessCode());
     }
 
     @ExceptionHandler(value = Exception.class)

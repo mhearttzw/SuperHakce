@@ -11,38 +11,31 @@ import lombok.Data;
 @Data
 public class AuthInfoModel {
     /**
-     * 用户id-当前客户经理ID
+     * 用户id
      */
     private Long userId;
 
     /**
-     * 用户名-当前客户经理名称
+     * 用户名
      */
     private String userName;
 
     /**
-     * 机构id-当前机构ID
+     * 用户token
      */
-    private Long organizationId;
-
-    /**
-     * 机构名-当前机构名称
-     */
-    private String organizationName;
-
-    /**
-     * 权限类型  (0L,"查询自己"),(1L,"查询当前机构"),(2L,"查询当前机构和子机构"),(3L,"查询所有");
-     */
-    private Integer DataScope;
-
-    /**
-     * 可操作机构列表以拼接
-     */
-    private String orgListStr;
-
-    private String token;
+    private String userToken;
 
     private String phone;//当前登录人的电话
+
+    /**
+     * 用户密码
+     */
+    private String password;
+
+    /**
+     * 密码盐
+     */
+    private String salt;
 
     private String email;//当前登录人的邮箱
 

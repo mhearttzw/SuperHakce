@@ -9,11 +9,10 @@ import com.superhakce.avengers.model.common.AuthInfoModel;
  */
 public interface AuthService {
 
-
-    public String getAuthInfo();
-
     /**
-     * 解析为返回信息 String为model,返回数据则鉴权通过,否则不通过
+     * 用户鉴权
+     * @return
      */
-    public AuthInfoModel hasAuth(String authInfo);
+    public AuthInfoModel getAuthInfo();
+
 }
