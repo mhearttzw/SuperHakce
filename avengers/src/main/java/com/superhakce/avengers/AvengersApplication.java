@@ -2,13 +2,15 @@ package com.superhakce.avengers;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.PropertySource;
 
 @SpringBootApplication
-@EnableEurekaServer
+//@EnableEurekaServer
 @EnableFeignClients
+@EnableDiscoveryClient
 @PropertySource({"classpath:application.properties", "classpath:application.yml"})
 public class AvengersApplication {
 

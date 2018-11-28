@@ -70,4 +70,22 @@
         </plugins>
     </build>
 
+    <profiles>
+        <profile>
+            <id>8761</id>
+            <properties>
+                <profileActive>8761</profileActive>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>8762</id>
+            <properties>
+                <profileActive>8762</profileActive>
+            </properties>
+        </profile>
+    </profiles>
+
 </project>

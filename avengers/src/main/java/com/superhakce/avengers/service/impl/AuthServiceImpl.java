@@ -31,13 +31,6 @@ import java.util.Optional;
 @Slf4j
 public class AuthServiceImpl implements AuthService {
 
-
-    @Value("${authorization.url}")
-    private String authUrl;
-
-    @Value("${server.context-path}")
-    private String contextPath;
-
     @Autowired
     private RedisService redisService;
 
